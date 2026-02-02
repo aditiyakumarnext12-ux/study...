@@ -1,0 +1,88 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        button {
+            margin: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Study Hub</h1>
+        <nav>
+            <a href="#notes">Notes</a>
+            <a href="#quiz">Quiz</a>
+        </nav>
+    </header>
+    <main>
+        <section id="notes">
+            <h2>Study Notes</h2>
+            <p>Here's a quick note on HTML: It's the backbone of web pages, using tags like &lt;p&gt; for paragraphs.</p>
+            <ul>
+                <li>Key concept: Semantic HTML improves accessibility.</li>
+                <li>Tip: Always close your tags!</li>
+            </ul>
+        </section>
+        <section id="quiz">
+            <h2>Quick Quiz</h2>
+            <p>What does HTML stand for?</p>
+            <button onclick="checkAnswer('HyperText Markup Language')">HyperText Markup Language</button>
+            <button onclick="checkAnswer('Wrong')">Something Else</button>
+            <p id="result"></p>
+        </section>
+    </main>
+    <script>
+        function checkAnswer(answer) {
+            const result = document.getElementById('result');
+            if (answer === 'HyperText Markup Language') {
+                result.textContent = 'Correct! Well done.';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'Oops, try again.';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>
